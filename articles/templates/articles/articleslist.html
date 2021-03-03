@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTICLES</title>
+    <link rel ="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>ARTICLES LIST</h1>
+    <h1>جواد ترابی</h1>
+    <h2>کارشناس برق قدرت</h2>
+    <h3>برنامه نویس پایتون</h3>
+    <p>I LOVE PYTHON</p>
+    {% for a in articles %}
+    <h3><a href="#">{{a.title}}</a></h3>
+    <p>{{a.snippet}}</p>
+    <p>{{a.date}}</p>
+    {% endfor%}
+    
+</body>
+</html>
+
